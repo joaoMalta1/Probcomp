@@ -1,3 +1,4 @@
+#1 a)
 set.seed(123)
 clientes <- 1000000
 total_sinistros <- 0
@@ -54,3 +55,8 @@ cat("total de sinistros:", total_sinistros, "\n")
 cat("sinistros de B:", sinistros_b, "\n")
 cat("P(B|sinistro):", round(p_b_dado_sinistro * 100, 2), "%\n")
 cat("P(ate_30|sinistro):", round(p_ate_30_dado_sinistro * 100, 2), "%\n") #round arredonda para 2 casas decimais
+
+
+
+
+#FALTOU FAZER P(𝐵 ∣ Sinistro e ateˊ 30 anos).
