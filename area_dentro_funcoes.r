@@ -8,11 +8,12 @@ gx<- function(x){
     -x^2 + (6*x) -5 
 }
 
-xmin <- -2
+# para achar fazer bhaskara na fx e gx e definir entre esses qual é o maior x e o menor x
+xmin <- -2 
 xmax <- 5
 
 ymin <- 0
-ymax <- 6.25
+ymax <- 6.25 # como é uma parabola faz f(-b/2a) para achar o ponto maximo da parabola e esse é o ymax comparar com o valor de f(x) e g(x) para ver qual é o maior e esse é o ymax
 
 nsamples<- 1000
 

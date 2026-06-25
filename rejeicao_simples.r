@@ -12,7 +12,7 @@ gerarAmostraRej <- function (n){
     u <- runif(n)
     y <- runif(n)
     validos <- numeric(n)
-    c <- 16/9
+    c <- 16/9 #derivar e igualar a 0 ai encontra o x depois aplcia esse valor em f(x) 
     aceitos<- 0
     while(aceitos <n ){
         razao <- fx(u)/ c* (hx(u))

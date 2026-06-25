@@ -1,6 +1,6 @@
 gerarAmostra <- function(nsamples){
     u <- runif(nsamples)
-    resp <- 4 * (u^(1/2)) +1 
+    resp <- 4 * (u^(1/2)) +1  # a inversa é obtida integrando f(x)dx e igualando a u, depois isolando x.
     return (resp)
 }
 
