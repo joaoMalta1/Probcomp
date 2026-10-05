@@ -15,29 +15,29 @@ for(i in 1:nsamples) {
     processamento <- sample(c(2, 3, 4, 5), 1, replace = TRUE, prob = c(0.1, 0.6, 0.2, 0.1))
     outras_10 <- sample(c(1, 2, 3), 10, replace = TRUE, prob = c(0.2, 0.6, 0.2))
     
-    # Soma total das 14 características e cálculo do FA
+    # soma das caracteristicas e calculo do FA
     soma_caracteristicas <- dist_dados + req_desempenho + reusabilidade + processamento + sum(outras_10)
     fa <- 0.65 + 0.01 * soma_caracteristicas
     
-    # 4. PF Ajustado
+    # PF Ajustado
     pf_ajustado <- pf_nao_ajustado * fa
     pf_ajustado_vec[i] <- pf_ajustado
     
-    # 5. Produtividade (horas/PF)
+    # 5. produtividade (horas/PF)
     produtividade <- sample(c(4, 5, 6), 1, replace = TRUE, prob = c(0.2, 0.7, 0.1))
     
-    # 6. Tempo em semanas (40 horas/semana)
+    # tempo em semanas (40 horas/semana)
     tempo_horas <- pf_ajustado * produtividade  #cada ponto de funcao ajustado leva * horas definidas no sample anterior
     tempo_semanas <- tempo_horas / 40
     tempo_semanas_vec[i] <- tempo_semanas
     
-    # 7 custo 
+    # custo 
     custo_hora <- sample(c(80, 100, 120), 1, replace = TRUE, prob = c(0.2, 0.6, 0.2))
     custo_total <- tempo_horas * custo_hora #as horas usadas pra finalizar todos os PF * custo 
     custo_vec[i] <- custo_total
 }
 
-# ==================== RESULTADOS ==================== #
+# ==================== RESULTADOS #
 
 # a) 
 media_pf_ajustado <- mean(pf_ajustado_vec)
